@@ -1,25 +1,10 @@
-buildscript {
-	//spring 버전 설정.
-	ext {
-		springBootVersion = '4.13.0.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-		maven {url "https://repo.spring.io/snapshot"}
-		maven {url "https://repo.spring.io/milestone"}
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
-}
-
 plugins {
-	id 'org.springframework.boot' version '4.13.0.RELEASE' 
+	id 'org.springframework.boot' version '2.6.2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
 
-group = 'com.example'
+group = 'com'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11' //JavaSE 11을 사용. (단, jdk는 15 사용)
 
@@ -33,7 +18,11 @@ repositories {
 //프로젝트에 필요한 라이브러리 의존성을 설정.
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2'
+	runtimeOnly 'mysql:mysql-connector-java'
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+	compileOnly 'org.springframework.boot:spring-boot-configuration-processor'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
