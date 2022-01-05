@@ -1,5 +1,5 @@
 buildscript {
-	//spring 버전 설정.
+	//spring 버전 설정
 	ext {
 		springBootVersion = '4.13.0.RELEASE'
 	}
@@ -14,23 +14,20 @@ buildscript {
 }
 
 plugins {
-	id 'org.springframework.boot' version '4.13.0.RELEASE' 
+	id 'org.springframework.boot' version '2.6.2' 
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11' //JavaSE 11을 사용. (단, jdk는 15 사용)
+sourceCompatibility = '11' //자바 11을 사용. (jdk는 15 사용)
 
-//스프링 부트 프로젝트에서 사용하는 라이브러리들을 받아오는 저장소를 설정.
 repositories {
-	mavenCentral() //기본 저장소인 maven reposi-tory (주소 생략 가능)
+	mavenCentral()
 	maven {url "https://repo.spring.io/snapshot"}
 	maven {url "https://repo.spring.io/milestone"}
 }
-
-//프로젝트에 필요한 라이브러리 의존성을 설정.
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
