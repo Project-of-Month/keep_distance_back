@@ -26,6 +26,7 @@ Keep Distance Back End Project
 	
 ## application.properties 설정
 **해당 부분** 수정 후 실행. 
+
 	spring.datasource.hikari.jdbc-url=jdbc:mysql://**localhost:3306**/keep_distance_db 
 	spring.datasource.hikari.username=**root** 
 	spring.datasource.hikari.password=**1010** 
