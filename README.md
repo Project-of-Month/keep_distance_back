@@ -25,7 +25,7 @@ Keep Distance Back End Project
 	CHORE: 빌드 업무 수정, 패키지 매니저 수정(ex .gitignore 수정 같은 경우) 
 	
 ## application.properties 설정
-**해당 부분** 수정 후 실행.
+**해당 부분** 수정 후 실행. 
 	spring.datasource.hikari.jdbc-url=jdbc:mysql://**localhost:3306**/keep_distance_db 
 	spring.datasource.hikari.username=**root** 
 	spring.datasource.hikari.password=**1010** 
